@@ -14,6 +14,16 @@ running entirely inside your terminal, written in Rust.
 - Adjustable simulation parameters
 - Real-time simulation telemetry
 - Bounded trajectory history
+- Three interactive color themes: Aurora, Nebula and Solar
+- Responsive terminal dashboard
+- Automatic trajectory fitting
+- Connected trajectory rendering
+- Age-based trajectory color gradients
+- Toggleable viewport grid
+- Focus mode for immersive visualization
+- Liang-Barsky line clipping
+- Color-coded real-time telemetry
+- Highlighted parameter selection
 
 ## Installation
 
@@ -38,6 +48,10 @@ cargo run --release
 | P | Select parameter |
 | J / K | Adjust parameter |
 | [ / ] | Adjust simulation speed |
+| T | Cycle color themes |
+| G | Toggle viewport grid |
+| F | Toggle focus mode |
+| M | Toggle automatic viewport fitting |
 | Q / Esc | Quit |
 
 ## Mathematics

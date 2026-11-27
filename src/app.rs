@@ -13,6 +13,11 @@ pub struct App {
     pub auto_rotate: bool,
     pub steps_per_frame: usize,
     pub selected_parameter: usize,
+
+    pub show_grid: bool,
+    pub focus_mode: bool,
+    pub auto_fit: bool,
+    pub theme_index: usize,
 }
 
 impl App {
@@ -25,6 +30,11 @@ impl App {
             auto_rotate: false,
             steps_per_frame: 20,
             selected_parameter: 0,
+
+            show_grid: true,
+            focus_mode: false,
+            auto_fit: true,
+            theme_index: 0,
         }
     }
 
@@ -135,6 +145,22 @@ impl App {
                     .adjust_parameter(self.selected_parameter, 1.0);
 
                 self.paused = false;
+            }
+
+            KeyCode::Char('g') => {
+                self.show_grid = !self.show_grid;
+            }
+
+            KeyCode::Char('f') => {
+                self.focus_mode = !self.focus_mode;
+            }
+
+            KeyCode::Char('m') => {
+                self.auto_fit = !self.auto_fit;
+            }
+
+            KeyCode::Char('t') => {
+                self.theme_index = (self.theme_index + 1) % 3;
             }
 
             _ => {}
